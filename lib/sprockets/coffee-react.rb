@@ -22,7 +22,6 @@ module Sprockets
 
     def self.install(environment = ::Sprockets)
       environment.register_preprocessor 'application/javascript', Sprockets::CoffeeReact
-      environment.register_postprocessor 'application/javascript', Sprockets::CoffeeReactPostprocessor
       environment.register_engine '.cjsx', Sprockets::CoffeeReactScript
       environment.register_engine '.js.cjsx', Sprockets::CoffeeReactScript
     end
